@@ -103,6 +103,7 @@ module OmniAuth
       end
 
       def get_access_token(request)
+        debugger
         if request.xhr? && request.params['code']
           verifier = request.params['code']
           redirect_uri = request.params['redirect_uri'] || 'postmessage'
